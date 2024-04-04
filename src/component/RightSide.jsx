@@ -7,11 +7,13 @@ import img1 from '../Image/qZone1.png'
 import img2 from '../Image/qZone2.png'
 import img3 from '../Image/qZone3.png'
 
-const LeftSide = () => {
+
+const RightSide = () => {
     return (
         <div>
+              <div>
             <h3 className="text-xl font-bold text-gray-700">Login With</h3>
-            <div className="h-[90vh] overflow-hidden overflow-y-scroll mt-6">
+            <div className="lg:h-[90vh] lg:overflow-hidden lg:overflow-y-scroll mt-6">
             <div className="space-y-3 ">
             <button className="btn w-full bg-[steelblue] text-white flex"><GrGoogle className="text-[20px]"/>Login With Google</button>
             <button className="btn w-full bg-[steelblue] text-white flex"><BsGithub className="text-[20px]"/>Login With Github</button>
@@ -36,7 +38,10 @@ const LeftSide = () => {
             </div>
            </div>
         </div>
+        </div>
     );
 };
- 
-export default LeftSide;
+
+export default RightSide;
+
+

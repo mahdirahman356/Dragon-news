@@ -3,6 +3,7 @@ import MainComponent from "./MainComponent/MainComponent";
 import Home from "./component/Home";
 import Login from "./component/Login";
 import Register from "./component/Register";
+import NewsDetails from "./component/NewsDetails";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
     {
         path:"/register",
         element:<Register></Register>
+    },
+    {
+        path: "/news/:id",
+        loader: () => fetch('/news.json'),
+        element:<NewsDetails></NewsDetails>
     }
 ])
 

@@ -9,15 +9,17 @@ import cardImg3 from '../Image/3.png'
 import LeftSideSM from "./LeftSideSM";
 
 
-const RightSide = () => {
-    let [categories, setCategories ] = useState([])
+
+const LeftSide = () => {
+  let [categories, setCategories ] = useState([])
     useState(()=> {
     fetch('categories.json')
     .then(res => res.json())
     .then(data => setCategories(data))
     },[])
-    return (
-        <div className="">
+  return (
+    <div>
+      <div className="">
            <div className="flex items-center gap-5">
            <LeftSideSM></LeftSideSM>
            <h3 className="text-[18px] md:text-xl font-semibold md:font-bold text-gray-700">All Caterogy</h3>
@@ -61,7 +63,8 @@ const RightSide = () => {
             </div>
            </div>
         </div>
-    );
+    </div>
+  );
 };
 
-export default RightSide;
+export default LeftSide;

@@ -1,6 +1,19 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "./Context";
 
 const Navbar = () => {
+   let {userLogOut, user} = useContext(AuthContext)
+  let handleLogOut = () => {
+      userLogOut()
+      .then(()=> {
+        console.log('user is log outed')
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+      
+  }
     return (
            <div className="flex justify-between items-center  py-6 ">
   <div className="navbar-start">
@@ -28,9 +41,11 @@ const Navbar = () => {
      <div className="w-10 rounded-full mr-3">
           <img className="rounded-full"  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
 </div>
-    <NavLink to="/login"><button className="btn bg-[steelblue] text-white">Login</button></NavLink>
-    <button className="btn bg-[steelblue] text-white">Log Out</button>
+     {
+      user ?     <button onClick={handleLogOut}  className="btn bg-[steelblue] text-white">Log Out</button>
+         :     <NavLink to="/login"><button className="btn bg-[steelblue] text-white">Login</button></NavLink>
 
+     }
   </div>
 </div>
      

@@ -2,11 +2,12 @@ import { FaEye, FaStar } from "react-icons/fa";
 import { HiOutlineBookmark } from "react-icons/hi";
 import { MdOutlineShare } from "react-icons/md";
 import PropTypes from 'prop-types'; 
+import { Link } from "react-router-dom";
 
 
 
 const News = ({allNews}) => {
-    let {title,author,image_url,details,rating,total_view} = allNews
+    let {_id,title,author,image_url,details,rating,total_view} = allNews
     return (
            <div>
             <div className="space-y-3 border-2 border-[#F3F3F3] rounded-lg ">
@@ -31,8 +32,8 @@ const News = ({allNews}) => {
                 <div className="p-4 space-y-5">
                      <h3 className="text-xl font-semibold ">{title}</h3>
                      <img className="rounded-md" src={image_url} alt="" />
-                     <p>{details}</p>
-                     <p className="font-semibold text-[#FF8C47]">Read More </p>
+                     <p>{details.length > 200 ? details.slice(0,200) : details}</p>
+                     <Link to={`/news/${_id}`}><p className="font-semibol text-[#FF8C47]">Read More </p></Link>
  
                      <div className="flex justify-between items-center">
                          <div className="flex items-center gap-2">
