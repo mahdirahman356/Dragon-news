@@ -3,10 +3,9 @@ import { HiOutlineBookmark } from "react-icons/hi";
 import { MdOutlineShare } from "react-icons/md";
 import PropTypes from 'prop-types'; 
 
-``
+
 
 const News = ({allNews}) => {
-    console.log(allNews)
     let {title,author,image_url,details,rating,total_view} = allNews
     return (
            <div>

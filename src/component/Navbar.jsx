@@ -1,7 +1,8 @@
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-           <div className="flex justify-between items-center bg-base-100 my-2 lg:my-10">
+           <div className="flex justify-between items-center  py-6 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className=" lg:hidden">
@@ -15,17 +16,21 @@ const Navbar = () => {
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>About</a></li>
-      <li><a>Career</a></li>
+    <ul className="menu menu-horizontal px-1 gap-8">
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/career">Career</NavLink>
+      <NavLink to="/login">Login</NavLink>
+     
     </ul>
   </div>
   <div className="navbar-end flex items-center">
      <div className="w-10 rounded-full mr-3">
           <img className="rounded-full"  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
 </div>
-    <button className="btn bg-[steelblue] text-white">Log In</button>
+    <NavLink to="/login"><button className="btn bg-[steelblue] text-white">Login</button></NavLink>
+    <button className="btn bg-[steelblue] text-white">Log Out</button>
+
   </div>
 </div>
      
