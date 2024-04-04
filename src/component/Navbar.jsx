@@ -21,8 +21,8 @@ const Navbar = () => {
       <li><a>Career</a></li>
     </ul>
   </div>
-  <div className="navbar-end flex">
-  <div className="w-10 rounded-full mr-3">
+  <div className="navbar-end flex items-center">
+     <div className="w-10 rounded-full mr-3">
           <img className="rounded-full"  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
 </div>
     <button className="btn bg-[steelblue] text-white">Log In</button>
