@@ -14,12 +14,14 @@ const News = () => {
             <h3 className="hidden lg:grid text-xl font-bold text-gray-700">Dragon News Home</h3>
             
            
-           {
-                news.map((news,index) => <NewsContent
+           <div className="lg:mt-6">
+           <div className="lg:h-[90vh] lg:overflow-hidden lg:overflow-y-scroll">
+           {news.map((news,index) => <NewsContent
                 key={index}
                 news={news}
-                ></NewsContent>)
-            }
+                ></NewsContent>)}
+           </div>
+           </div>
           
 
          

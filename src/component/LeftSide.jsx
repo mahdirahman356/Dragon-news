@@ -22,8 +22,8 @@ const RightSide = () => {
            <LeftSideSM></LeftSideSM>
            <h3 className="text-[18px] md:text-xl font-semibold md:font-bold text-gray-700">All Caterogy</h3>
            </div>
-           <div className="hidden lg:grid">
-           {categories.map(categories => <div className="w-[80%] mx-auto mt-5" key={categories.id}>
+           <div className="hidden lg:grid w-[80%] mx-auto mt-6 h-[90vh] overflow-hidden overflow-y-scroll">
+           {categories.map(categories => <div className="mt-4" key={categories.id}>
             <Link to={`categories/${categories.id}`}>
             <p className="mb-2 text-[#9F9F9F]">{categories.name}</p>
             </Link>

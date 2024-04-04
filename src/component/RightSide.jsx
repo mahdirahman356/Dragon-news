@@ -11,7 +11,8 @@ const LeftSide = () => {
     return (
         <div>
             <h3 className="text-xl font-bold text-gray-700">Login With</h3>
-            <div className="space-y-3 mt-5">
+            <div className="h-[90vh] overflow-hidden overflow-y-scroll mt-6">
+            <div className="space-y-3 ">
             <button className="btn w-full bg-[steelblue] text-white flex"><GrGoogle className="text-[20px]"/>Login With Google</button>
             <button className="btn w-full bg-[steelblue] text-white flex"><BsGithub className="text-[20px]"/>Login With Github</button>
             </div>
@@ -33,7 +34,7 @@ const LeftSide = () => {
                <div><img className="mx-auto" src={img2} alt="" /></div>
                <div><img className="mx-auto" src={img3} alt="" /></div>
             </div>
-
+           </div>
         </div>
     );
 };

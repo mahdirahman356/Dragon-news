@@ -9,7 +9,7 @@ const NewsContent = ({news}) => {
     let {title,author,image_url,details,rating,total_view} = news
     return (
         <div className="">
-            <div className="lg:mt-5 space-y-3 border-2 border-[#F3F3F3] rounded-lg ">
+            <div className="space-y-3 border-2 border-[#F3F3F3] rounded-lg ">
                      <div  className="flex justify-between items-center bg-[#F3F3F3] py-2 px-4">
                     <div className="flex items-center gap-3">
                     <div className="w-10 rounded-full mr-3">

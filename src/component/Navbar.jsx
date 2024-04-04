@@ -1,7 +1,7 @@
 
 const Navbar = () => {
     return (
-           <div className="navbar bg-base-100 my-10">
+           <div className="flex justify-between items-center bg-base-100 my-2 lg:my-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className=" lg:hidden">
@@ -21,7 +21,7 @@ const Navbar = () => {
       <li><a>Career</a></li>
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end flex">
   <div className="w-10 rounded-full mr-3">
           <img className="rounded-full"  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
 </div>
