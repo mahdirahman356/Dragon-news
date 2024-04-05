@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "./Context";
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
     let {userLogin} = useContext(AuthContext)
     let [error, setError] = useState('')
+    let location = useLocation()
+    console.log(location)
+    let navigat = useNavigate()
     let handleLogin = (e) => {
         e.preventDefault()
        let form = new FormData(e.currentTarget)
@@ -16,6 +22,7 @@ const Login = () => {
        .then(result => {
         console.log(result.user)
         e.target.reset()
+        navigat(location?.state ? location.state : "/")
        })
        .catch(error => {
         const errorMessage = error.message;
@@ -26,18 +33,19 @@ const Login = () => {
     return (
         <div className="bg-[#F3F3F3] ">
            <div className="w-[95%] md:w-[80%] mx-auto pb-16">
+
            <Navbar></Navbar>
            <div className="bg-white p-7 md:p-10 w-[98%] md:w-[70%] lg:w-[50%] mx-auto mt-9 rounded-md">
            <h2 className="text-3xl font-bold text-center md:pb-14 border-b-[1px]">Login your account</h2>
                      <form onSubmit={handleLogin} className="mt-12">
                        <p className="font-semibold mb-2">Email address</p> 
                       <label className="input  flex items-center rounded-md gap-2 mb-6 bg-[#F3F3F3]">
-                        <input type="email" name="email" className="grow" placeholder="Email" />
+                        <input type="email" name="email" className="grow" placeholder="Email" required />
                       </label>
 
                       <p className="font-semibold mb-2">Password</p> 
                       <label className="input  flex items-center gap-2 rounded-md bg-[#F3F3F3]">
-                        <input type="password" name="password" className="grow" placeholder="Password" />
+                        <input type="password" name="password" className="grow" placeholder="Password" required/>
                       </label>
                       {error && <p className="mt-6 text-red-500">{error}</p>}
                       <input className="btn text-white  w-full mt-7 bg-[steelblue] rounded-md" type="submit" value="Login" />

@@ -43,12 +43,12 @@ const Register = () => {
 
                        <p className="font-semibold mb-2">Email address</p> 
                       <label className="input  flex items-center rounded-md gap-2 mb-6 bg-[#F3F3F3]">
-                        <input type="email" name="email" className="grow" placeholder="Email" />
+                        <input type="email" name="email" className="grow" placeholder="Email" required/>
                       </label>
 
                       <p className="font-semibold mb-2">Password</p> 
                       <label className="input  flex items-center gap-2 rounded-md bg-[#F3F3F3] mb-3">
-                        <input type="password" name="password" className="grow" placeholder="Password" />
+                        <input type="password" name="password" className="grow" placeholder="Password" required/>
                       </label>
 
                       <input className="mr-2" type="checkbox" name="" id="" /> <span className="text-[14px]">Accept Term & Conditions</span>
